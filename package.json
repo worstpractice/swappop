@@ -25,7 +25,7 @@
   },
   "exports": "./dist/index.js",
   "files": [
-    "./dist/index.js"
+    "dist"
   ],
   "homepage": "https://github.com/worstpractice/swappop#readme",
   "jest": {
@@ -62,7 +62,7 @@
     "url": "git+https://github.com/worstpractice/swappop.git"
   },
   "scripts": {
-    "build": "node ./nuke.mjs && tsc",
+    "build": "node ./nuke.mjs && tsc && node ./postbuild.mjs",
     "fmt": "prettier -u --config .prettierrc -w ./src/**/*.{d.ts,ts}",
     "lint": "eslint ./src --ext .d.ts,.ts",
     "lint:fix": "eslint ./src --ext .d.ts,.ts --fix",
@@ -72,5 +72,5 @@
   },
   "type": "module",
   "typings": "./dist/index.d.ts",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
