@@ -1,0 +1,76 @@
+{
+  "author": "worstpractice",
+  "bugs": {
+    "url": "https://github.com/worstpractice/swappop/issues"
+  },
+  "description": "O(1) popping, at any index, from arrays of any length",
+  "devDependencies": {
+    "@types/jest": "27.0.1",
+    "@types/node": "16.6.1",
+    "@typescript-eslint/eslint-plugin": "4.29.1",
+    "@typescript-eslint/parser": "4.29.1",
+    "eslint": "7.32.0",
+    "eslint-plugin-unicorn": "35.0.0",
+    "fast-check": "2.17.0",
+    "jest": "27.0.6",
+    "pnpm": "6.13.0",
+    "prettier": "2.3.2",
+    "ts-jest": "27.0.4",
+    "ts-node": "10.2.0",
+    "tslib": "2.3.1",
+    "typescript": "4.5.0-dev.20210816"
+  },
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
+  "exports": "./dist/index.js",
+  "files": [
+    "./dist/index.js"
+  ],
+  "homepage": "https://github.com/worstpractice/swappop#readme",
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testMatch": [
+      "**/*.spec.+(ts|js)"
+    ],
+    "testPathIgnorePatterns": [
+      "\\node_modules\\",
+      "\\dist\\",
+      "\\vscode\\"
+    ],
+    "transform": {
+      ".+\\.(ts|js)$": "ts-jest"
+    }
+  },
+  "keywords": [
+    "array",
+    "swap",
+    "pop"
+  ],
+  "license": "MIT",
+  "name": "swappop",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worstpractice/swappop.git"
+  },
+  "scripts": {
+    "build": "node ./nuke.mjs && tsc && node ./postbuild.mjs",
+    "fmt": "prettier -u --config .prettierrc -w ./src/**/*.{d.ts,ts}",
+    "lint": "eslint ./src --ext .d.ts,.ts",
+    "lint:fix": "eslint ./src --ext .d.ts,.ts --fix",
+    "prepare": "pnpm run build",
+    "test": "cls && jest",
+    "tidy": "pnpm run lint:fix && pnpm run fmt"
+  },
+  "type": "module",
+  "typings": "./dist/index.d.ts",
+  "version": "1.0.0"
+}
