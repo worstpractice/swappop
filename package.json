@@ -62,7 +62,7 @@
     "url": "git+https://github.com/worstpractice/swappop.git"
   },
   "scripts": {
-    "build": "node ./nuke.mjs && tsc && node ./postbuild.mjs",
+    "build": "node ./nuke.mjs && tsc",
     "fmt": "prettier -u --config .prettierrc -w ./src/**/*.{d.ts,ts}",
     "lint": "eslint ./src --ext .d.ts,.ts",
     "lint:fix": "eslint ./src --ext .d.ts,.ts --fix",
@@ -72,5 +72,5 @@
   },
   "type": "module",
   "typings": "./dist/index.d.ts",
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
