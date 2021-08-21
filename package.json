@@ -25,7 +25,6 @@
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
-  "exports": "./dist/index.js",
   "files": [
     "dist"
   ],
@@ -58,6 +57,7 @@
     "pop"
   ],
   "license": "MIT",
+  "module": "./dist/index.js",
   "name": "swappop",
   "repository": {
     "type": "git",
@@ -70,11 +70,11 @@
     "lint": "eslint ./src --ext .d.ts,.ts",
     "lint:fix": "eslint ./src --ext .d.ts,.ts --fix",
     "prepare": "pnpm build",
-    "test": "cls && jest",
+    "test": "jest --clear-cache && jest",
     "tidy": "pnpm lint:fix && pnpm fmt",
     "treeshake": "node ./scripts/treeshake.js"
   },
   "type": "module",
   "typings": "./dist/index.d.ts",
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
