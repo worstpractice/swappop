@@ -61,13 +61,15 @@
     "url": "git+https://github.com/worstpractice/swappop.git"
   },
   "scripts": {
-    "build": "node ./nuke.mjs && tsc && node ./postbuild.mjs",
+    "build": "pnpm clean && tsc && pnpm treeshake",
+    "clean": "node ./scripts/clean.js",
     "fmt": "prettier -u --config .prettierrc -w ./src/**/*.{d.ts,ts}",
     "lint": "eslint ./src --ext .d.ts,.ts",
     "lint:fix": "eslint ./src --ext .d.ts,.ts --fix",
-    "prepare": "pnpm run build",
+    "prepare": "pnpm build",
     "test": "cls && jest",
-    "tidy": "pnpm run lint:fix && pnpm run fmt"
+    "tidy": "pnpm lint:fix && pnpm fmt",
+    "treeshake": "node ./scripts/treeshake.js"
   },
   "type": "module",
   "typings": "./dist/index.d.ts",
