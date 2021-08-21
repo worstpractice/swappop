@@ -1,3 +1,5 @@
+import { ObSet } from 'obset';
+
 /** Highly performant single-item removal from ANYWHERE (!) in a given `targetArray`. */
 export const swapPop = <T>(targetArray: T[], targetIndex: number): T | undefined => {
   const { length } = targetArray;
@@ -34,3 +36,5 @@ export const swapPop = <T>(targetArray: T[], targetIndex: number): T | undefined
   //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   return targetArray.pop(); // Exit #5
 };
+
+console.log(ObSet);

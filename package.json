@@ -3,6 +3,9 @@
   "bugs": {
     "url": "https://github.com/worstpractice/swappop/issues"
   },
+  "dependencies": {
+    "obset": "2.3.2"
+  },
   "description": "O(1) popping, at any index, from arrays of any length",
   "devDependencies": {
     "@types/jest": "27.0.1",
@@ -41,9 +44,9 @@
       "**/*.spec.+(ts|js)"
     ],
     "testPathIgnorePatterns": [
-      "\\node_modules\\",
       "\\dist\\",
-      "\\vscode\\"
+      "\\node_modules\\",
+      "\\scripts\\"
     ],
     "transform": {
       ".+\\.(ts|js)$": "ts-jest"

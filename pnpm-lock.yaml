@@ -9,11 +9,15 @@ specifiers:
   eslint-plugin-unicorn: 35.0.0
   fast-check: 2.17.0
   jest: 27.0.6
+  obset: 2.3.2
   prettier: 2.3.2
   ts-jest: 27.0.5
   ts-node: 10.2.1
   tslib: 2.3.1
   typescript: 4.5.0-dev.20210821
+
+dependencies:
+  obset: 2.3.2
 
 devDependencies:
   '@types/jest': 27.0.1
@@ -2756,6 +2760,13 @@ packages:
     resolution: {integrity: sha512-h2AatdwYH+JHiZpv7pt/gSX1XoRGb7L/qSIeuqA6GwYoF9w1vP1cw42TO0aI2pNyshRK5893hNSl+1//vHK7hQ==}
     dev: true
 
+  /obset/2.3.2:
+    resolution: {integrity: sha512-3+6bka7pqbY3GuVYUFsFXn1l6wSVsnjd0PYOOelcUR+0lELyaMvWB/9W/C6SZurnd1yzzLy7X618kdLhaeFS9A==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      swappop: 1.0.2
+    dev: false
+
   /once/1.4.0:
     resolution: {integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=}
     dependencies:
@@ -3222,6 +3233,11 @@ packages:
       has-flag: 4.0.0
       supports-color: 7.2.0
     dev: true
+
+  /swappop/1.0.2:
+    resolution: {integrity: sha512-OJ3l+fv+a2/DLANeZ6OyZEL8817nJqPFms/iRF4NAqM8N3Yuf1Gs1eClMJ3xcrmj72cNe+1hQvw6egWbyuZ8uQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: false
 
   /symbol-tree/3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}

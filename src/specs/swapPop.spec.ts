@@ -1,8 +1,8 @@
 /* eslint-disable sort-keys */
 import { anything, array, assert, integer, property } from 'fast-check';
 import { swapPop } from '..';
-import { randomIndexOf } from '../utils/randomIndex';
-import { trinary } from '../utils/trinary';
+import { randomIndexOf } from './utils/randomIndex';
+import { trinary } from './utils/trinary';
 
 test('swapPop should return undefined when the array is empty', (): void => {
   assert(
