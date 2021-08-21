@@ -57,7 +57,7 @@
     "pop"
   ],
   "license": "MIT",
-  "module": "./dist/index.js",
+  "exports": "./dist/index.js",
   "name": "swappop",
   "repository": {
     "type": "git",
